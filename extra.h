@@ -17,7 +17,33 @@ struct Match_Pointer{
     int length;
     Match_Pointer(int begin,int length);
 };
+struct User{
+    string name;
+    int id;
+    vector<int> followers;
+};
+class graph{
+public:
+    graph(){
+       for(int i=0;i<20;i++){
+           for(int j=0;j<20;j++){
+               vertArr[i][j]=0;
+           }
+       }
+    }
 
+    int vertArr[20][20]; //the adjacency matrix initially 0
+    int numVertices = 1;
+
+    void add_vertex(){
+       numVertices++;
+    }
+
+    void add_edge(int u, int v) { //function to add edge into the matrix
+       vertArr[u][v] = 1;
+    }
+
+};
 
 //detect error and correct
 vector<pair<string,int>>detecterrors(vector<string> xml_data);
