@@ -14,4 +14,5 @@ GUI XML Editor written in Qt
 6-Compress the file to reduce its size and 
 
 7-decompress it back.
+
 8-represents a social network as a directed graph
